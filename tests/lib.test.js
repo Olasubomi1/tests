@@ -8,13 +8,11 @@ describe("Absolute", () => {
 
   it("Absolute - should return a positive number if input is negative.", () => {
     const result = lib.absolute(-1);
-    console.log(result);
     expect(result).toBe(1);
   });
 
   it("Absolute - should return 0 if input is 0.", () => {
     const result = lib.absolute(0);
-    console.log(result);
     expect(result).toBe(0);
   });
 });
@@ -61,7 +59,7 @@ describe("getProduct", () => {
     /**
     //  too specific
      expect(result).toEqual({ id: 1, price: 10 });
-    //  too general 
+    //  too general
      expect(result).toHaveProperty("id", 1);
      */
   });
