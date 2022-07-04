@@ -26,3 +26,28 @@ describe("greet", () => {
     expect(result).toContain("Olasoft");
   });
 });
+
+describe("getCurrencies", () => {
+  it("should return supported currencies.", () => {
+    const result = lib.getCurrencies();
+
+    // Ideal way
+    expect(result).toEqual(expect.arrayContaining(["USD", "AUD", "EUR"]));
+
+    /**
+    // Too general
+    expect(result).toBeDefined();
+    expect(result).not.toBeNull();
+
+    // Too Specific
+    expect(result[0]).toBe("USD");
+    expect(result[1]).toBe("AUD");
+    expect(result.length).toBe(3);
+
+    // proper way
+    expect(result).toContain("USD");
+    expect(result).toContain("AUD");
+    expect(result).toContain("EUR");
+    */
+  });
+});
