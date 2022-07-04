@@ -51,3 +51,18 @@ describe("getCurrencies", () => {
     */
   });
 });
+
+describe("getProduct", () => {
+  it("should return the product with the given id", () => {
+    const result = lib.getProduct(1);
+
+    // proper way
+    expect(result).toMatchObject({ id: 1, price: 10 });
+    /**
+    //  too specific
+     expect(result).toEqual({ id: 1, price: 10 });
+    //  too general 
+     expect(result).toHaveProperty("id", 1);
+     */
+  });
+});
